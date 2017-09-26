@@ -58,7 +58,8 @@ public class ESUtils {
 
         Client client = ESUtils.getClient();
         IndexResponse indexResponse = client.prepareIndex().setIndex(ESUtils.getIndexName())
-                .setType(ESUtils.getTypeName()).setSource("{\"prodId\":1,\"prodName\":\"ipad5\",\"prodDesc\":\"比你想的更强大\",\"catId\":1}").setId("1")
+                .setType(ESUtils.getTypeName()).setSource("{\"prodId\":1,\"prodName\":\"ipad5\",\"prodDesc\":\"比你想的更强大\",\"catId\":1}")
+                .setId("1")
                 .execute()
                 .actionGet();
         System.out.println("添加成功,isCreated=" + indexResponse.isCreated());
