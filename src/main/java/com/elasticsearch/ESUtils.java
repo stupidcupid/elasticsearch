@@ -22,6 +22,8 @@ public class ESUtils {
 
     public static final String INDEX_NAME = "esindex";
 
+    public static final String USER_TYPE = "userindex";
+
     public static String getIndexName() {
         return INDEX_NAME;
     }
